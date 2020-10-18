@@ -1,0 +1,72 @@
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+
+int main()
+{
+	int bp=200,ffp=50,pp=500,sp=150;
+	int total,q1,q2,q3,q4,i,n;
+	int total1=0,total2=0,total3=0,total4=0;	
+    char choice;
+	printf ("\nWELCOME TO THE ABAR KHABO RESTAURENT\n");
+	printf ("\n\n MENU \n\n");
+	printf ("\nFood Item\tPrice");
+	printf ("\n Burger\t\tRs. 200");
+	printf ("\n French Fries\tRs. 50");
+	printf ("\n Pizza\t\tRs. 500");
+	printf ("\n Sandwiches\tRs. 150\n");
+		printf ("\nEnter How many types of food will you order ");
+		scanf ("%d",&n);
+		for (i=1;i<=n;i++)
+	{
+	printf ("\nPRESS B FOR Burger");
+	printf ("\nPRESS F FOR French Fries");
+	printf ("\nPRESS P FOR Pizza");
+	printf ("\nPRESS S FOR Sandwiches");
+	printf ("\nPRESS E FOR Exit");
+	
+	printf ("\nPlease place your order  ");
+	fflush(stdin);
+	scanf ("%c",&choice);
+	
+	switch (choice)
+		{
+		case 'B':
+			printf ("\nYou have chosen Burger");
+			printf ("\nInput the quantity you want");
+			scanf ("%d",&q1);
+			total1=q1*bp;
+			break;
+		case 'F':
+			printf ("\nYou have chosen French Fries");
+			printf ("\nInput the quantity you want");
+			scanf ("%d",&q2);
+			total2=q2*ffp;
+			break;		
+		case 'P':
+			printf ("\nYou have chosen Pizza");
+			printf ("\nInput the quantity you want");
+			scanf ("%d",&q3);
+			total3=q3*pp;
+			break;	
+		case 'S':
+			printf ("\nYou have chosen Sandwiches");
+			printf ("\nInput the quantity you want");
+			scanf ("%d",&q4);
+			total4=q4*sp;
+			break;
+		case 'E':
+			exit(0);
+		default :
+		printf ("\nNot in the Menu");		
+		}
+	}
+			
+			total=total1+total2+total3+total4;	
+		printf ("\nTotal charge is Rs. %d only\n",total);
+		printf ("\nENJOY THE FOOD");
+		printf ("\n\nPLEASE VISIT AGAIN\n");
+		printf ("\n***THANK YOU***");
+	getch();
+	return 0;
+}
